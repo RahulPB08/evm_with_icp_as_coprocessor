@@ -1,0 +1,10 @@
+type ResultString = variant { Ok : text; Err : text };
+
+service : {
+  "set_contract_address" : (text) -> ();
+  "get_address" : () -> (ResultString);
+  "call_to_get_latest_event" : () -> (ResultString);
+  "submit_result_fn_call":()->(ResultString);
+  "start_with_interval_secs":(nat64)->();
+  "stop_timers" : () -> ();
+}

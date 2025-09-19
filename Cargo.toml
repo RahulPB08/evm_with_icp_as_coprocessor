@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "canister/evm_with_icp_as_coprocessor_backend"
+]
+resolver = "2"
