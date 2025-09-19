@@ -5,7 +5,7 @@ import "forge-std/Script.sol";
 import "../src/Coprocessor.sol";
 
 contract MyScript is Script {
-    function run(address chain_fusion_canister_address) external returns(address){
+    function run(address chain_fusion_canister_address) external returns (address) {
         // the private key of the deployer is the first private key printed by running anvil
         uint256 deployerPrivateKey = 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80;
 
