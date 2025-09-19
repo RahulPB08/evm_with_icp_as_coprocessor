@@ -14,7 +14,7 @@ contract Coprocessor {
     event NewJob(uint256 indexed job_id);
 
     // Function to create a new job
-    function newJob() public payable returns(uint256){
+    function newJob() public payable returns (uint256) {
         // Require at least 0.01 ETH to be sent with the call
         require(msg.value >= 0.01 ether, "Minimum 0.01 ETH not met");
 
@@ -34,11 +34,8 @@ contract Coprocessor {
         return jobs[_job_id];
     }
 
-    function callback_icp(uint256  result, uint256 job_id) public {
-        require(
-            msg.sender == coprocessor,
-            "Only the coprocessor can call this function"
-        );
+    function callback_icp(uint256 result, uint256 job_id)
+        require(msg.sender == coprocessor, "Only the coprocessor can call this function");
         jobs[job_id] = result;
     }
 
