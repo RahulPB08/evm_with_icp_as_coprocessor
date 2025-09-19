@@ -30,7 +30,7 @@ contract Coprocessor {
         job_id++;
     }
 
-    function getResult(uint256 _job_id) public view returns (uint256) {
+    function getResult(uint256 _job_id) public view returns(uint256) {
         return jobs[_job_id];
     }
 
