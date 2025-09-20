@@ -13,8 +13,8 @@ contract CoprocessorTest is Test {
 
     function setUp() external {
         deployCoprocessor = new MyScript();
-        vm.deal(PLAYER,100000000000000000*10);
-        vm.deal(vm.addr(0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80),100000000000000000*10);
+        vm.deal(PLAYER, 100000000000000000 * 10);
+        vm.deal(vm.addr(0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80), 100000000000000000 * 10);
         coprocessor = deployCoprocessor.run(PLAYER);
     }
 
